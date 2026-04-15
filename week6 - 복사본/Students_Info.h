@@ -1,0 +1,24 @@
+﻿#pragma once
+
+#ifndef GUARD_Student_Info_h
+#define GUARD_Student_Info_h
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+struct Student_Info {
+	string name;
+	double midterm, final;
+	vector<double> homework;
+};
+
+//함수 원형 정의
+bool compare(const Student_Info&, const Student_Info&); //이름 비교하기
+istream& read(istream&, Student_Info&); //한 학생의 정보 읽기
+istream& read_hw(istream&, vector<double>&); // 모든 과제 점수 읽기
+
+#endif
+#pragma once
